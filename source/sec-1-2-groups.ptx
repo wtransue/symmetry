@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-1-2-groups" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Groups and Point Groups</title>
+
+  <p>
+    Groups are an extension of a more familiar concept: sets. 
+    A group is a set equipped with some notion of "multiplication" between the elements. 
+  </p>
+
+  <p> 
+    There are two kinds of groups commonly encountered by chemists: point groups and space groups. 
+    A point group is a collection of symmetry operations that leave at least one point unmoved. 
+    A space groups additionally considers translational symmetry operations. 
+    Point groups are used in molecular systems and space groups are used in crystal systems. 
+  </p>
+
+  <p>
+    We will deal only with point groups. 
+    After we establish molecular symmetries in a purely spatial context, we will introduce spin in the next chapter and turn to the use of so-called "double groups". 
+  </p>
+
+</section>

@@ -5,7 +5,7 @@
 
   <p>
     The symmetry operations in a three-dimensional space are typically classified as one of the five following types: identity, reflection, inversion, rotation, and improper rotation. 
-    Of these, identity is the most fundamental. 
+    Each symmetry operation can be expressed using a "matrix representative", a <m>3 \times 3</m> matrix that acts on any point in Cartesian space. 
   </p>
 
   <p> 
