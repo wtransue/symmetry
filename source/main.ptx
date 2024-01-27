@@ -5,14 +5,14 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="my-great-book">
-    <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
+    <title>Molecular Symmetry, Magnetism, and Spectroscopy</title>
+    <!-- <subtitle>An introduction to the use of group theory, doule groups, and irreducible tensor methods in molecular magnetism and spectroscopy</subtitle> -->
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <xi:include href="./ch-chapter-title.ptx" />
+    <xi:include href="./ch-1-groups.ptx" />
 
 
     <!-- Include backmatter -->

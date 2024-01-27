@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-chapter-title" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Symmetry and Group Theory</title>
+
+  <introduction>
+    <p>
+      This resource is designed for chemistry graduate students who are seeking a more mathematical approach to learning about point groups and group theory. 
+      We assume the reader has taken inorganic chemistry and the quantum portion of physical chemistry, both at an undergraduate level. 
+      We also assume familiarity with basic multivariate calculus, basic linear algebra, and with the main conclusions of chemistry group theoretic concepts. 
+    </p>
+    <p> 
+      Because we are not aiming to be a student's first exposure to group theory and its applications in chemistry, it is prudent for us to outline a few particularly useful and/or popular resources. 
+      Here are a few: 
+    </p>
+    <ul>
+      <li>
+        <p>
+          Resource 1
+        </p>
+      </li>
+      <li>
+        <p>
+          Resource 2
+        </p>
+      </li>
+      <li>
+        <p>
+          Resource 3
+        </p>
+      </li>
+    </ul>
+    <p>
+      This first chapter is designed to provide a refresher on the "molecular" point groups and their representations. 
+      Once we reach representation theory, we generally follow the treatise "Group Theory in Spectroscopy with Applications in Magnetic Circular Dichroism" by Drs. Susan B. Piepho and Paul N. Schatz, a fantastic resource that appears to be out of print. 
+    </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-1-1-operations.ptx" />
+
+</chapter>
