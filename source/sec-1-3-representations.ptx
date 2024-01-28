@@ -1,20 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-1-3-representations" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Representation Theory</title>
+  <title>Group Representations</title>
 
-  <p>
-    A group is a collection of symmetry operations, and we have established that we use matrix representatives to express each symmetry operation. 
-    The easiest way to introduce a "group representation" (or often just "representation") is as a set of matrix representatives, one for each operation. 
-    For example, a representation for the <m>\mathcal{C}_{2v}</m> point group could be 
-    <me>
-      \left\{ 
-        \underbrace{\begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix}}_{E}, 
-        \underbrace{\begin{pmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix}}_{C_2}, 
-        \underbrace{\begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix}}_{\sigma_{xz}}, 
-        \underbrace{\begin{pmatrix} -1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix}}_{\sigma_{yz}}, 
-      \right\}
-    </me>
-  </p>
+  <subsection xml:id="subsec-1-3-1-introduction">
+    <title>An Initial Example: trans-Diazene</title>
+    
+    <p>
+      A group is a collection of symmetry operations, and we have established that we use matrix representatives to express each symmetry operation. 
+      The easiest way to introduce a "group representation" (or often just "representation") is as a set of matrix representatives, one for each operation. 
+      For example, let's look at the following representation for the <m>\mathcal{C}_{2h}(\{E, C_2, i, \sigma_h\})</m> point group, which we'll call <m>\Gamma</m>:
+      <me>
+        \left\{ 
+          \begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix}, 
+          \begin{pmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix}, 
+          \begin{pmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp -1 \end{pmatrix}, 
+          \begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp -1 \end{pmatrix} 
+        \right\}
+      </me>.
+      This representation associates a matrix representative with each symmetry operation. 
+      You should think of <m>\Gamma</m> like a function that taken in a symmetry operation and spits out a matrix representative: 
+      <men xml:id="eq-c2h-gamma-cartesian">
+        \begin{aligned} 
+          \Gamma(E) \amp = \begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix} \amp 
+          \Gamma(C_2) \amp = \begin{pmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix} \\
+          \Gamma(i) \amp = \begin{pmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp -1 \end{pmatrix} \amp 
+          \Gamma(\sigma_h) \amp = \begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp -1 \end{pmatrix} 
+        \end{aligned}
+      </men>
+      Look how these matrices behave exactly like the symmetry operations when applied to some point <m>\vec{r} = (x, y, z)</m>: 
+      <md>
+        <mrow> 
+          \Gamma(E) \vec{r} \amp = \begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} x \\ y \\ z \end{pmatrix} 
+          \amp (x, y, z) \amp \xrightarrow{E} (x, y, z)
+        </mrow>
+        <mrow> 
+          \Gamma(C_2) \vec{r} \amp = \begin{pmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} -x \\ -y \\ z \end{pmatrix} 
+          \amp (x, y, z) \amp \xrightarrow{C_2} (-x, -y, z)
+        </mrow>
+        <mrow> 
+          \Gamma(i) \vec{r} \amp = \begin{pmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp -1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} -x \\ -y \\ -z \end{pmatrix} 
+          \amp (x, y, z) \amp \xrightarrow{i} (-x, -y, -z)
+        </mrow>
+        <mrow> 
+          \Gamma(\sigma_h) \vec{r} \amp = \begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp -1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} x \\ y \\ -z \end{pmatrix} 
+          \amp (x, y, z) \amp \xrightarrow{\sigma_h} (x, y, -z)
+        </mrow>
+      </md>
+      We have thus "encoded" the behavior of the symmetry operations into matrices. 
+      This will allow us to now use <i>math</i> instead of abstract three-dimensional manipulations. 
+      As I'm sure you can imagine, mathematicians have developed many tools to deal with matrices, and we can now apply them to any question involving a <m>\mathcal{C}_{2h}</m>-symmetric system that is well-described by <m>\Gamma</m>. 
+    </p>
+
+    <p>
+      Note that it is incorrect to say that <m>C_2 = \left(\begin{smallmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp 1\end{smallmatrix}\right)</m> because <m>C_2</m> is an abtract concept; it's a physical action. 
+      We use <m>\Gamma</m> to associate this abstract concept to a matrix representative. 
+    </p>
+
+    <p>
+      This set of four matrices is said to represent the group because they multiply in an analogous manner to the four symmetry operations. 
+      Using the relations laid out in <xref ref="eq-c2h-gamma-cartesian" />, notice how this matches the <m>\mathcal{C}_{2h}</m> Cayley table exactly: 
+      <me>
+        \begin{array}{c|cccc}
+          \times \amp 
+          \substack{E \\ \left(\begin{smallmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{smallmatrix}\right)} \amp 
+          \substack{C_2 \\ \left(\begin{smallmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp 1 \end{smallmatrix}\right)} \amp 
+          \substack{i \\ \left(\begin{smallmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp -1 \end{smallmatrix}\right)} \amp 
+          \substack{\sigma_h \\ \left(\begin{smallmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp -1 \end{smallmatrix}\right)} \\ \hline 
+          \substack{E \\ \left(\begin{smallmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{smallmatrix}\right)} \amp 
+          \substack{E \\ \left(\begin{smallmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{smallmatrix}\right)} \amp 
+          \substack{C_2 \\ \left(\begin{smallmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp 1 \end{smallmatrix}\right)} \amp 
+          \substack{i \\ \left(\begin{smallmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp -1 \end{smallmatrix}\right)} \amp 
+          \substack{\sigma_h \\ \left(\begin{smallmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp -1 \end{smallmatrix}\right)} \\ 
+          \substack{C_2 \\ \left(\begin{smallmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp 1 \end{smallmatrix}\right)} \amp 
+          \substack{C_2 \\ \left(\begin{smallmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp 1 \end{smallmatrix}\right)} \amp 
+          \substack{E \\ \left(\begin{smallmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{smallmatrix}\right)} \amp 
+          \substack{\sigma_h \\ \left(\begin{smallmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp -1 \end{smallmatrix}\right)} \amp 
+          \substack{i \\ \left(\begin{smallmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp -1 \end{smallmatrix}\right)} \\ 
+          \substack{i \\ \left(\begin{smallmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp -1 \end{smallmatrix}\right)} \amp 
+          \substack{i \\ \left(\begin{smallmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp -1 \end{smallmatrix}\right)} \amp 
+          \substack{\sigma_h \\ \left(\begin{smallmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp -1 \end{smallmatrix}\right)} \amp 
+          \substack{E \\ \left(\begin{smallmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{smallmatrix}\right)} \amp 
+          \substack{C_2 \\ \left(\begin{smallmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp 1 \end{smallmatrix}\right)} \\ 
+          \substack{\sigma_h \\ \left(\begin{smallmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp -1 \end{smallmatrix}\right)} \amp 
+          \substack{\sigma_h \\ \left(\begin{smallmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp -1 \end{smallmatrix}\right)} \amp 
+          \substack{i \\ \left(\begin{smallmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp -1 \end{smallmatrix}\right)} \amp 
+          \substack{C_2 \\ \left(\begin{smallmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp 1 \end{smallmatrix}\right)} \amp 
+          \substack{E \\ \left(\begin{smallmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{smallmatrix}\right)} 
+        \end{array}
+      </me>
+    </p>
+  </subsection>
 
 </section>

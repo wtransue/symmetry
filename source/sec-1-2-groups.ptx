@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-1-2-groups" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Groups and Point Groups</title>
+  <title>Point Groups and Group Theory</title>
 
   <p>
     Groups are an extension of a more familiar concept: sets. 
@@ -18,6 +18,21 @@
   <p>
     We will deal only with point groups. 
     After we establish molecular symmetries in a purely spatial context, we will introduce spin in the next chapter and turn to the use of so-called "double groups". 
+  </p>
+
+  <p>
+    The Cayley table for each point groups can be calculated. 
+    There are multiple conventions 
+    <me>
+      \begin{array}{c|ccccc} 
+        \times \amp E \amp A \amp B \amp C \amp \cdots \\ \hline 
+        E \amp E \times E \amp E \times A \amp E \times B \amp E \times C \amp \cdots \\ 
+        A \amp A \times E \amp A \times A \amp A \times B \amp A \times C \amp \cdots \\ 
+        B \amp B \times E \amp B \times A \amp B \times B \amp B \times C \amp \cdots \\ 
+        C \amp C \times E \amp C \times A \amp C \times B \amp C \times C \amp \cdots \\ 
+        \vdots \amp \vdots \amp \vdots \amp \vdots \amp \vdots \amp \ddots 
+      \end{array} 
+    </me>
   </p>
 
 </section>

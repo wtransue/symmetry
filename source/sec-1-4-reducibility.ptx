@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-1-4-reducibility" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Representation Theory</title>
+
+  <subsection xml:id="subsec-1-4-1-introduction">
+    <title>Characterizing Representations</title>
+    
+    <p>
+      We've now seen multiple representations, often of the same group. 
+      Is there an underlying pattern? 
+    </p>
+  </subsection>
+
+  <subsection xml:id="Irreps">
+    <title>Simultaneous Block Diagonalization and Irreducible Representations</title>
+  </subsection>
+
+  <subsection xml:id="CharacterTables">
+    <title>Character Theory and Character Tables</title>
+  </subsection>
+
+  <subsection xml:id="OneDimension">
+    <title>A One-Dimensional Interlude</title>
+  </subsection>
+
+  <subsection xml:id="CartesianFunctions">
+    <title>Organizing Cartesian Functions</title>
+
+    <p>
+      Scalars, linear, quadratic, cubic functions, etc. 
+
+      Rotations and pseudovectors. 
+
+      Pseudoscalars and higher pseudotensors. 
+    </p>
+  </subsection>
+
+</section>

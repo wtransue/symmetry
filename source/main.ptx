@@ -13,6 +13,8 @@
 
     <!-- Include chapters -->
     <xi:include href="./ch-1-groups.ptx" />
+    <xi:include href="./ch-2-tensor.ptx" />
+    <xi:include href="./ch-3-electronic.ptx" />
 
 
     <!-- Include backmatter -->

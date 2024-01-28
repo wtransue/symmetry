@@ -34,11 +34,16 @@
       This first chapter is designed to provide a refresher on the "molecular" point groups and their representations. 
       Once we reach representation theory, we generally follow the treatise "Group Theory in Spectroscopy with Applications in Magnetic Circular Dichroism" by Drs. Susan B. Piepho and Paul N. Schatz, a fantastic resource that appears to be out of print. 
     </p>
+    <p>
+      Our resource here currently covers only point groups and not space groups. 
+    </p>
   </introduction>
 
   <!-- include sections -->
   <xi:include href="sec-1-1-operations.ptx" />
   <xi:include href="sec-1-2-groups.ptx" />
   <xi:include href="sec-1-3-representations.ptx" />
+  <xi:include href="sec-1-4-reducibility.ptx" />
+  <xi:include href="sec-1-5-spin.ptx" />
 
 </chapter>

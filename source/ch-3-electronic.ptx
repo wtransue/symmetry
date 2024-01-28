@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-3-lft" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Electronic Structure</title>
+
+  <introduction>
+    <p>
+      A major application of molecular symmetry is in the prediction and understanding of molecular electronic structure. 
+      We will begin with application of group theory in the construction of single-electron molecular orbitals. 
+      We will then review multielectron atomic theory before expanding those concepts to apply to transition metal complexes. 
+    </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-3-1-motheory.ptx" />
+
+</chapter>

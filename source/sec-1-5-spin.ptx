@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-1-5-spin" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Spin and Double Groups</title>
+
+  <subsection xml:id="subsec-1-5-introduction">
+    <title>What Is Spin?</title>
+    
+    <p>
+      Spin really switches things up, so let's start with a discussion of what spin is. 
+    </p>
+  </subsection>
+
+  <subsection xml:id="subsec-1-5-doubleGroups">
+    <title>Double Groups and their Representations</title>
+    
+    <p>
+      Spin really switches things up, so let's start with a discussion of what spin is. 
+    </p>
+  </subsection>
+
+  <subsection xml:id="subsec-1-5-magneticField">
+    <title>Magnetic Fields and Pseudovectors</title>
+    
+    <p>
+      Technically, the application of an external magnetic field has a huge consequence on the symmetry of the system. 
+      A magnetic field itself has its own direction; this may or may not be aligned with the principal rotation axis, so it has the potential to dramatically lower the symmetry of the system. 
+      Additionally, the magnetic field is a pseudovector so it transforms like rotations. 
+      At its core, a magnetic field causes descent to an abelian group, breaking all degeneracy. 
+      This is summarized in the following table: (no field vs field along principal axis vs field at skew angle) 
+      Several of these point groups are actually unique to systems in the presence of a magnetic field (e.g. K). 
+    </p>
+
+    <p>
+      Luckily, we generally think about a magnetic field as a small perturbation to our system. 
+      This is because the influence of magnetism is generally weak. 
+    </p>
+  </subsection>
+
+</section>
