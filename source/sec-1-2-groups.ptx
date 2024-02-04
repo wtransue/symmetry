@@ -21,6 +21,12 @@
   </p>
 
   <p>
+    When we hunt for symmetry operations of a molecule, we think only of the nuclear positions. 
+    The patterns of distributions of electrons will be treated later using representation theory. 
+    For example, in analysis of benzene, we do not need to think about the π cloud of electron density split above and below the plane of the molecule; instead, we focus only on how the six carbon and six hydrogen atoms are interchanged by the symmetry operations. 
+  </p>
+  
+  <p>
     The Cayley table for each point groups can be calculated. 
     There are multiple conventions 
     <me>

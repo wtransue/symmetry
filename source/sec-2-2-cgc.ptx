@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-2-cgc" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Clebsch–Gordan Coefficients</title>
+
+  <p>
+    We can now see that multiplication of irreps gives us insight into the symmetry of the product. 
+    But is there more info buried inside? 
+    Yes! 
+  </p>
+
+  <subsection xml:id="subsec-atomic-cgc">
+    <title>In Atomic Systems</title>
+
+    <p>
+      Vector coupling coefficients get their name from atomic irreps. 
+      Each irrep of <m>\mathcal{K}_h</m> corresponds to a specific amount of angular momentum: <m>\mathsf{S}</m> has <m>L = 0</m>, <m>\mathsf{P}</m> has <m>L = 1</m>, <m>\mathsf{D}</m> has <m>L = 2</m>, etc. 
+      This should bring to mind the <m>\ell</m> atomic quantum number. 
+      If you recall, each <m>\ell</m> has <m>2\ell+1</m> orbitals within the subshell that are indexed by <m>m_\ell</m>, which varies as <m>-\ell \leq m_\ell \leq +\ell</m>. 
+      The <m>m_\ell</m> quantum number tells you directional information: how much angular momentum is oriented along the axis of quantization (the "<m>z</m>" axis)? 
+    </p>
+
+    <p>
+      If we have a magnitude of the angular momentum and a direction of the angular momentum, it is starting to sound like a vector (or pseudovector). 
+      This raises the question: how to they couple together? 
+    </p>
+
+    <p>
+      The triangle rule is a simple rule from geometry. 
+      If you know the lengths of two of the sides of a triangle but not the angle between them, you can put a limit on the range of lengths of the third edge. 
+      The range is <m>\vert L_2 - L_1 \vert \leq L_3 \leq (L_2 + L_1)</m>. 
+      Our angular momenta have definite lengths, so we can figure out the possible lengths of momenta after their coupling using this formula, too. 
+    </p>
+  </subsection>
+
+</section>

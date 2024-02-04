@@ -1,19 +1,22 @@
-# PreTeXt Codespace
+# Molecular Symmetry
 
-Use this template repository to quickly start a new [PreTeXt](https://pretextbook.org) project entirely in the cloud, using GitHub Codespaces.  
+This resource is meant to be a more mathematical approach for learning about symmetry, group theory, representation theory, and the irreducible tensor method for molecular point groups. 
+These concepts will be developed in the context of electronic structure (ligand field theory), spectroscopy, and magnetism. 
 
-## Instructions
+## Other Resources
 
-Look for the green button at the top right of this page.  If the button says `Use this template`, then you are ready to create a new repository for your project.  Click on the button and select "Create a new repository".  On the next page, give your project a name, select public or private (this can be changed later), and click the "Create repository from template" button.
+There are several fantastic resources on symmetry in chemistry, such as the textbooks listed below. 
 
-You now have a GitHub repository saved in your account.  You can come back to that page any time you want to work on your project (note the URL or else find it in the list of your repositories when you log in to GitHub).
+1. Miessler, Fisher, and Tarr 
+2. Harris and Bertolucci 
+3. Butler 
+4. Cotton 
+5. Etc. 
 
-To start work on your project, go to the green button at the top of *your* repository's page, which will say `<> Code`.  
+There are additionally several online resources: 
 
-1. Click on this button.
-2. Click on the tab that says "Codespaces."
-3. Click "Create codespace on main."
+1. SymOtter 
+2. Gernot Katzer 
+3. Etc. 
 
-This take a minute or two (just the first time; later this will be much faster) and then open a browser version of VS Code with everything set up to start working.  It will generate a new pretext book (and replace this README with one you can edit for your project). 
-
-Next time you want to work on your book, return to your newly created repository, go to the green `<> Code` button, and select the codespace you previously created.  If you don't see that codespace (perhaps you deleted it to save space), you can always create a new codespace.
+If there are other resources that should be added to this list, please share them with me. 

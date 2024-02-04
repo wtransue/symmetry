@@ -5,13 +5,15 @@
 
   <introduction>
     <p>
-      A major application of molecular symmetry is in the prediction and understanding of molecular electronic structure. 
-      We will begin with application of group theory in the construction of single-electron molecular orbitals. 
-      We will then review multielectron atomic theory before expanding those concepts to apply to transition metal complexes. 
+      We have now established how to describe molecular symmetry using the tools of group and representation theory. 
+      We can now assign functions to specific irreps of the point group to figure out how they transfer under various symmetry operations. 
+      A big question now arises: what can we do with that info? 
+      In this chapter, we will discuss what happens when we multiply functions together, and we'll establish how to predict the symmetry(ies) of the product. 
     </p>
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-2-1-cgc.ptx" />
+  <xi:include href="sec-2-1-irreps.ptx" />
+  <xi:include href="sec-2-2-cgc.ptx" />
 
 </chapter>

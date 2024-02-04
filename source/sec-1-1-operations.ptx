@@ -3,126 +3,202 @@
 <section xml:id="sec-1-1-operations" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Symmetry Elements and Symmetry Operations</title>
 
-  <p>
-    A <em>symmetry element</em> is a line, point, or plane about which a symmetry operation is performed. 
-    A <em>symmetry operation</em> is describes the actual movement or act that is performed upon an object. 
-    Another way to define a symmetry element is the set of all points that are left unmoved by a symmetry operation. 
-    While symmetry elements are often easy to spot in a molecule (or other object), it is the symmetry operations that are central to the study of molecular symmetry. 
-    This distinction will hopefully become clear as we go through each type of operation. 
-  </p>
-
-  <p>
-    If an object is rendered indistinguishable before and after performance of a symmetry operation, it is said to <em>possess</em> that form of symmetry. 
-    Why do we care about indistinguishability? 
-    All particles are fundamentally indistinguishable! 
-    All electrons have the same mass and charge, all protons have the same mass and charge, all carbon-12 nuclei have the same mass and charge, etc. 
-    This is of central importance in quantum mechanics, and is closely tied to concepts like the Pauli exclusion principle. 
-    If I were to show you an atom of water under an (impossibly) powerful microscope, ask you to close your eyes and then reopen them, there is no way for you to know if I had rotated the molecule 180° or not. 
-    We therefore say that a molecule of water possesses a twofold axis of symmetry. 
-  </p>
-
-  <p>
-    Our study of molecular symmetry should begin with an accounting of all the ways something can display symmetry in three dimensions. 
-    We typically classify 3D symmetry operations in one of the five following ways: identity, rotation, reflection, inversion, and improper rotation. 
-    Any three-dimensional operation can be described as either <em>proper</em> or <em>improper</em>. 
-    A proper operation can actually be physically performed; whereas, an improper one cannot. 
-  </p>
-
-  <remark xml:id="remark-proper-improper">
-    <title>Proper vs Improper Operations</title> 
+  <subsection xml:id="subsec-1-1-definitions">
+    <title>Defining the Symmetry Operations</title>
 
     <p>
-      Imagine you are holding an apple in your hand. 
-      If I ask you to perform a <m>C_2</m> operation, you could rotate the apple 180° without issue. 
-      If instead I ask you to perform a <m>\sigma</m> operation, you could not perform a reflection. 
-      The closest you could do is hold up a mirror to demonstrate what it would look like if you were able to perform a reflection, but there's no physical way for you to reflect that apple in the "real world". 
-      This is because rotation is a <em>proper</em> operation and reflection is an <em>improper</em> one. 
+      A <em>symmetry element</em> is a line, point, or plane about which a symmetry operation is performed. 
+      A <em>symmetry operation</em> is describes the actual movement or act that is performed upon an object. 
+      While symmetry elements are often easy to spot in a molecule (or other object), it is the symmetry operations that are central to the study of molecular symmetry. 
+      This distinction will hopefully become clear as we go through each type of operation. 
     </p>
-  </remark>
+  
+    <remark xml:id="symmetry-element-definition">
+      <title>Definitions of Symmetry Elements</title>
+      
+      Another common second way to define a symmetry element is the set of all points that are left unmoved by a symmetry operation. 
+      Unfortunately, these two definitions do not always give the same result. 
+      We will not use the definition based on unmoved points because (in the author's opinion) it gives a less useful result in the case of improper rotations. 
+    </remark>
+  
+    <p>
+      If an object is rendered indistinguishable before and after performance of a symmetry operation, it is said to <em>possess</em> that form of symmetry. 
+      Why do we care about indistinguishability? 
+      All particles are fundamentally indistinguishable! 
+      All electrons have the same mass and charge, all protons have the same mass and charge, all carbon-12 nuclei have the same mass and charge, etc. 
+      This is of central importance in quantum mechanics, and is closely tied to concepts like the Pauli exclusion principle. 
+      If I were to show you an atom of water under an (impossibly) powerful microscope, ask you to close your eyes and then reopen them, there is no way for you to know if I had rotated the molecule 180° or not. 
+      We therefore say that a molecule of water possesses a twofold axis of symmetry. 
+    </p>
+  
+    <p>
+      Our study of molecular symmetry should begin with an accounting of all the ways something can display symmetry in three dimensions. 
+      We typically classify 3D symmetry operations in one of the five following ways: identity, rotation, reflection, inversion, and improper rotation. 
+      Any three-dimensional operation can be described as either <em>proper</em> or <em>improper</em>. 
+      A proper operation can actually be physically performed; whereas, an improper one cannot. 
+    </p>
+  
+    <remark xml:id="remark-proper-improper">
+      <title>Proper vs Improper Operations</title> 
+  
+      <p>
+        Imagine you are holding an apple in your hand. 
+        If I ask you to perform a <m>C_2</m> operation, you could rotate the apple 180° without issue. 
+        If instead I ask you to perform a <m>\sigma</m> operation, you could not perform a reflection. 
+        The closest you could do is hold up a mirror to demonstrate what it would look like if you were able to perform a reflection, but there's no physical way for you to reflect that apple in the "real world". 
+        This is because rotation is a <em>proper</em> operation and reflection is an <em>improper</em> one. 
+      </p>
+    </remark>
+  
+    <p> 
+      Let's introduce each type of symmetry operation in turn. 
+      As we do so, we will list a "matrix representative" for each — a tool to model the way the symmetry operation acts using a matrix. 
+      The matrix representatives below are uniquely constructed so that they can act on any point in 3D Cartesian space. 
+    </p>
+  
+    <p>
+      <ul>
+        <li>
+          <p>
+            <em>Identity (<m>E</m>):</em> 
+            The identity operation causes no change in the orientation of an object. 
+            While it may seem superfluous at first, it is absolutely central to our application of group theory later on. 
+            All objects obviously look the same before and after doing nothing, so we can say that all objects have <m>E</m> symmetry. 
+            The matrix representative for <m>E</m> in 3D Cartesian space is: 
+            <me>E \leftrightarrow \begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix}</me>
+            The symmetry element corresponding to <m>E</m> is somewhat arbitrary; it can be considered to be the point at the origin or the set of all points in 3D space. 
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      <ul>
+        <li>
+          <p>
+            <em>Rotation (<m>C_n</m>):</em> 
+            A <m>C_n</m> rotation describes a rotation by an angle <m>\theta = (360/n)^\circ</m> about some axis. 
+            The axis is the symmetry element of this operation and it may point in any direction. 
+            We generally choose then <m>C_n</m> axis of highest <m>n</m> to be the <m>z</m> axis during the course of our symmetry analysis — we call this the "principal axis" or "primary axis". 
+            We will <em>always</em> use right-handed rotations in this resource. 
+            The most general matrix representative for a <m>C_n</m> operation along some axis <m>\vec{u} = (u_x, u_y, u_z)</m> in 3D Cartesian space is: 
+            <me>
+                C_n(\vec{u}) \leftrightarrow \exp \left[ \theta \begin{pmatrix} 0 \amp -u_z \amp u_y \\ u_z \amp 0 \amp -u_x \\ -u_y \amp u_x \amp 0 \end{pmatrix} \right] 
+            </me>
+            where <m>\theta = 2\pi/n</m> and <m>\vec{u}</m> is a unit vector (<m>u_x^2+u_y^2+u_z^2 = 1</m>). 
+            If <m>\vec{u}</m> is along one of the Cartesian axes, this expression simplifies to:
+            <md>
+              <mrow> C_n(x) \amp \leftrightarrow \begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp \cos\theta \amp -\sin\theta \\ 0 \amp \sin\theta \amp \cos\theta \end{pmatrix} </mrow>
+              <mrow> C_n(y) \amp \leftrightarrow \begin{pmatrix} \cos\theta \amp 0 \amp \sin\theta \\ 0 \amp 1 \amp 0 \\ -\sin\theta \amp 0 \amp \cos\theta \end{pmatrix} </mrow>
+              <mrow> C_n(z) \amp \leftrightarrow \begin{pmatrix} \cos\theta \amp -\sin\theta \amp 0 \\ \sin\theta \amp \cos\theta \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix} </mrow>
+            </md>
+            For <m>C_n</m> rotations with <m>n \gt 2</m>, the difference between the symmetry operation and symmetry element can be appreciated more easily: e.g. a threefold-symmetry axis is a symmetry element and it has two associated symmetry operations: <m>C_3</m> (120°) and <m>C_3^2</m> (240°). 
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      <ul>
+        <li>
+          <p>
+            <em>Reflection (<m>\sigma</m>):</em> 
+            A <m>\sigma</m> operation describes a reflection through a plane (its symmetry element). 
+            If we call the normal vector to the plane <m>\vec{u} = (u_x, u_y, u_z)</m>, a general matrix formula can be expressed as: 
+            <me>
+              \sigma(\vec{u}) \leftrightarrow I - 2\vec{u} \vec{u}^\mathsf{T} 
+              = \begin{pmatrix} 1-2u_x^2 \amp -2u_xu_y \amp -2u_xu_z \\ -2u_xu_y \amp 1-2u_y^2 \amp -2u_yu_z \\ -2u_xu_z \amp -2u_yu_z \amp 1-2u_z^2 \end{pmatrix}
+            </me>
+            where <m>\vec{u}^\mathsf{T}</m> is a row matrix (the transpose of column matrix/vector <m>\vec{u}</m>) and we have assumed <m>u_x^2 + u_y^2 + u_z^2 = 1</m>. 
+            If <m>\vec{u}</m> is along one of the Cartesian axes, this expression simplifies to:
+            <md>
+              <mrow> \sigma(\vec{x}) = \sigma_{yz} \amp \leftrightarrow \begin{pmatrix} -1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix} </mrow>
+              <mrow> \sigma(\vec{y}) = \sigma_{zx} \amp \leftrightarrow \begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix} </mrow>
+              <mrow> \sigma(\vec{z}) = \sigma_{xy} \amp \leftrightarrow \begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp -1 \end{pmatrix} </mrow>
+            </md>. 
+            When there is a principal axis, we use the names "<m>\sigma_h</m>" to indicate a plane normal to the principal axis of symmetry, "<m>\sigma_v</m>" for a plane containing (parallel to) the principal axis of symmetry, and "<m>\sigma_d</m>" for a dihedral <m>\sigma_v</m> plane. 
+          </p>
+        </li>
+      </ul>
+  
+      <remark xml:id="remark-sigma-v-d">
+        <title><m>\sigma_v</m> vs <m>\sigma_d</m> Reflections</title> 
+    
+        <p>
+          This distinction can sometimes be confusing for students. 
+          The simplest way to describe a <m>\sigma_d</m> is as a special kind of <m>\sigma_v</m> that
+          <ul>
+            <li>
+              <p>
+                Bisects two <m>\sigma_v</m> planes <em>or</em> two <m>C_2'</m> axes
+              </p>
+            </li>
+            <li>
+              <p>
+                <em>And</em> passes through fewer atoms than a normal <m>\sigma_v</m> plane 
+              </p>
+            </li>
+          </ul>
+          So if you have found a reflection plane that seems not to intersect any atoms (except the one at the origin), you should check if it fits these criteria. 
+          If you encounter ambiguity beyond this, the distinction is probably from convention rather than a hard rule so it should be looked up in a table. 
+        </p>
+      </remark>
+    </p>
+    <p>
+      <ul>
+        <li>
+          <p>
+            <em>Inversion (<m>i</m>):</em> 
+            An inversion <m>i</m> operation take every point, and passes it through the origin to its opposite position. 
+            There is only one matrix to perform inversion of a Cartesian vector: 
+            <me>i \leftrightarrow \begin{pmatrix} -1 \amp 0 \amp 0 \\ 0 \amp -1 \amp 0 \\ 0 \amp 0 \amp -1 \end{pmatrix}</me>
+            The origin is the symmetry element of this operation. 
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      <ul>
+        <li>
+          <p>
+            <em>Improper Rotation (<m>S_n</m>):</em> 
+            An <m>S_n</m> improper symmetry operation is also known as a rotoreflection. 
+            It is performed about an axis (its symmetry elemetn), which may point in any direction. 
+            Conceptually, it can be visualized as a rotation by <m>C_n</m> followed by a reflection in the plane normal to that <m>C_n</m> axis: 
+            <me>S_n(\vec{u}) = C_n(\vec{u}) \sigma(\vec{u}) = \sigma(\vec{u}) C_n(\vec{u})</me>. 
+            The order of rotation and reflection do not matter in this particular case; you'll get the same answer. 
+          </p>
+        </li>
+      </ul>
+    </p>
+  
+    <p>
+      It is easy to use matrix representatives to establish whether an operation is proper or improper: matrices with determinants of <m>+1</m> correspond to proper operations, and those with determinants of <m>-1</m> to improper operations. 
+      An explanation for this is that any three-dimensional symmetry operation can be represented as either a (proper) rotation <m>C_n</m> or an improper rotation <m>S_n</m>:
+      <ul>
+        <li><p>Identity: <m>E = C_1</m> because a rotation by 360° is equivalent to no rotation at all.</p></li>
+        <li><p>Reflection: <m>\sigma = S_1</m> where the <m>S</m> axis is along the normal vector to the plane.</p></li>
+        <li><p>Inversion: <m>i = S_2</m> where the axis of <m>S</m> is actually irrelevant (i.e., it can be chosen to be in any direction).</p></li>
+      </ul>
+    </p>
+  </subsection>
 
-  <p> 
-    Let's introduce each type of symmetry operation in turn. 
-    As we do so, we will list a "matrix representative" for each — a tool to model the way the symmetry operation acts using a matrix. 
-    The matrix representatives below are uniquely constructed so that they can act on any point in 3D Cartesian space. 
-    <ul>
-      <li>
-        <p>
-          <em>Identity (<m>E</m>):</em> 
-          The identity operation causes no change in the orientation of an object. 
-          While it may seem superfluous at first, it is absolutely central to our application of group theory later on. 
-          All objects obviously look the same before and after doing nothing, so we can say that all objects have <m>E</m> symmetry. 
-          The matrix representative for <m>E</m> in 3D Cartesian space is: 
-          <me>E \leftrightarrow \begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix}</me>
-          The symmetry element corresponding to <m>E</m> can be considered to be the point at the origin, or it can be considered to be the set of all points in 3D space (it's a bit arbitrary). 
-        </p>
-      </li>
-      <li>
-        <p>
-          <em>Rotation (<m>C_n</m>):</em> 
-          A <m>C_n</m> rotation describes a rotation by an angle <m>\theta = (360/n)^\circ</m> about some axis. 
-          The axis may point in any direction, but we generally choose then <m>C_n</m> axis of highest <m>n</m> to be the <m>z</m> axis — we call this the "principal axis" or "primary axis". 
-          We will <em>always</em> use right-handed rotations in this resource. 
-          The most general matrix representative for a <m>C_n</m> operation along some axis <m>\vec{u} = (u_x, u_y, u_z)</m> in 3D Cartesian space is: 
-          <me>
-            \begin{aligned}
-              C_n(\vec{u}) 
-              \amp \leftrightarrow \exp \left[ \theta \begin{pmatrix} 0 \amp -u_z \amp u_y \\ u_z \amp 0 \amp -u_x \\ -u_y \amp u_x \amp 0 \end{pmatrix} \right] \\ 
-              \amp = \begin{pmatrix} 
-                \cos\theta+u_x^2(1-\cos\theta) \amp u_xu_y(1-\cos\theta)-u_z\sin\theta \amp u_xu_z(1-\cos\theta)+u_y\sin\theta \\ 
-                u_yu_x(1-\cos\theta)+u_z\sin\theta \amp \cos\theta+u_y^2(1-\cos\theta) \amp u_yu_z(1-\cos\theta)-u_x\sin\theta \\ 
-                u_zu_x(1-\cos\theta)-u_y\sin\theta \amp u_zu_y(1-\cos\theta)+u_x\sin\theta \amp \cos\theta+u_z^2(1-\cos\theta) 
-              \end{pmatrix}
-            \end{aligned}
-          </me>
-          where <m>\theta = 2\pi/n</m> and <m>\vec{u}</m> is a unit vector (<m>u_x^2+u_y^2+u_z^2 = 1</m>). 
-          If <m>\vec{u}</m> is along one of the Cartesian axes, this expression simplifies to:
-          <md>
-            <mrow> C_n(x) \amp \leftrightarrow \begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp \cos\theta \amp -\sin\theta \\ 0 \amp \sin\theta \amp \cos\theta \end{pmatrix} </mrow>
-            <mrow> C_n(y) \amp \leftrightarrow \begin{pmatrix} \cos\theta \amp 0 \amp \sin\theta \\ 0 \amp 1 \amp 0 \\ -\sin\theta \amp 0 \amp \cos\theta \end{pmatrix} </mrow>
-            <mrow> C_n(z) \amp \leftrightarrow \begin{pmatrix} \cos\theta \amp -\sin\theta \amp 0 \\ \sin\theta \amp \cos\theta \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix} </mrow>
-          </md>
-          For <m>C_n</m> rotations with <m>n \gt 2</m>, the difference between the symmetry operation and symmetry element can be appreciated more easily: e.g. a threefold-symmetry axis is a symmetry element and it has two associated symmetry operations: <m>C_3</m> (120°) and <m>C_3^2</m> (240°). 
-        </p>
-      </li>
-      <li>
-        <p>
-          <em>Reflection (<m>\sigma</m>):</em> 
-          <me>\begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix}</me>
-        </p>
-      </li>
-      <li>
-        <p>
-          <em>Inversion (<m>i</m>):</em> 
-          <me>\begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix}</me>
-        </p>
-      </li>
-      <li>
-        <p>
-          <em>Improper Rotation (<m>S_n</m>):</em> 
-          <me>\begin{pmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{pmatrix}</me>
-        </p>
-      </li>
-    </ul>
-  </p>
+  <subsection>
+    <title>Sequential Application of Symmetry Operations</title>
+    
+    <p>
+      If you apply a series of symmetry operations, we can represent this as repeatedly <em>left-multiplying</em> by the next symmetry operation. 
+    </p>
+    
+    <p>
+      Powers and inverses of symmetry operations 
+    </p>
+  </subsection>
 
-  <p>
-    It is easy to use matrix representatives to establish whether an operation is proper or improper: matrices with determinants of <m>+1</m> correspond to proper operations, and those with determinants of <m>-1</m> to improper operations. 
-    An explanation for this is that any three-dimensional symmetry operation can be represented as either a (proper) rotation <m>C_n</m> or an improper rotation <m>S_n</m>:
-    <ul>
-      <li><p>Identity: <m>E = C_1</m> because a rotation by 360° is equivalent to no rotation at all.</p></li>
-      <li><p>Reflection: <m>\sigma = S_1</m> where the <m>S</m> axis is along the normal vector to the plane.</p></li>
-      <li><p>Inversion: <m>i = S_2</m> where the axis of <m>S</m> is actually irrelevant (i.e., it can be chosen to be in any direction).</p></li>
-    </ul>
-  </p>
-
-  <p>
-    Inverses of symmetry operations and powers of symmetry  operations
-  </p>
-
-  <p>
-    When we hunt for symmetry operations of a molecule, we think only of the nuclear positions. 
-    The patterns of distributions of electrons will be treated later using representation theory. 
-    For example, in analysis of benzene, we do not need to think about the π cloud of electron density split above and below the plane of the molecule; instead, we focus only on how the six carbon and six hydrogen atoms are interchanged by the symmetry operations. 
-  </p>
+  <subsection>
+    <title>Active vs Passive Transformations</title>
+    
+    <p>
+      Transformations on basis functions vs on vectors 
+    </p>
+  </subsection>
 
 </section>

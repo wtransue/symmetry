@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-2-irreps" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Algebra of Irreducible Representations</title>
+
+  <p>
+    When we are calculating overlaps or other matrix elements for a system, we are often trying to evaluate an expression like the following: 
+    <me>
+      \int \Psi_1(\vec{r})^* \mathcal{O} \Psi_2(\vec{r}) \, d^3\vec{r}
+    </me>
+    for some operator <m>\mathcal{O}</m> where the integration is performed over all of space. 
+    If there are <m>N</m> electrons in our system, this is generalized to 
+    <me>
+      \int \Psi_1(\vec{r}_1, \dots, \vec{r}_N)^* \mathcal{O} \Psi_2(\vec{r}_1, \dots, \vec{r}_N) \, d^3\vec{r}_1 \cdots d^3\vec{r}_N
+    </me>.
+    Usually, we express this more compactly using bra–ket notation as 
+    <me> \langle \Psi_1 \vert \mathcal{O} \vert \Psi_2 \rangle</me> 
+    because this leaves the numbers of electrons ambiguous, and it makes it easier to consider the influence of spin, which not spatial like <m>\vec{r}</m>. 
+  </p>
+
+</section>
